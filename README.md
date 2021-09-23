@@ -1,35 +1,7 @@
-# Face detection demo (Flask app)
+# Demo: https://flask-face-detection-thuan.herokuapp.com/
 
-This is a very simple Flask app that let's the user upload a image and detects how many (if any) faces are there in the picture.
-
-## Hosting on Heroku
-
-Try it [here](https://face-detection-flask.herokuapp.com/).
-
-##### Generate pipfile with command:
-
-`pipenv install opencv-contrib-python`
-
-`pipenv install Flask`
-
-`pipenv install gunicorn`
-
-`pipenv install numpy`
-
-##### Add the following buildpack:
-
-https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-apt
-
-and include a list of apt package names to be installed the `Aptfile`
-
-## Docker
-
-Docker container based on: https://hub.docker.com/r/shosoar/alpine-python-opencv/
-
-To build the docker image and run locally:
-
-`cd face_detection_flask`
-
-`docker build -t face_detection_flask .`
-
-`docker run -it -p 3000:80 face_detection_flask`
+#### heroku login
+#### heroku create flask-face-detection-thuan
+#### heroku git:remote -a flask-face-detection-thuan
+#### heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-apt
+#### git push heroku HEAD:master
